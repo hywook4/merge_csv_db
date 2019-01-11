@@ -72,7 +72,8 @@ for k, v in index.items():
         else:
             components = readlist[v[0]][v[1]]
             for i in range (v[0]+1, len(readlist)):
-                components += ";"+readlist[i][v[1]]
+                if readlist[i][v[1]] != '':
+                    components += ";"+readlist[i][v[1]]
 
             #print(components)
             newlist.append(components)
