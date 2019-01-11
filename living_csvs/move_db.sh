@@ -11,6 +11,8 @@ do
         do
             if [ -d "$d2" ]
             then
+                echo $d2
+
                 for f in $d2/*.csv
                 do
                     python3 living.py "$f"
